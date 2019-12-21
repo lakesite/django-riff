@@ -64,7 +64,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             # insert your TEMPLATE_DIRS here
-            '{{ project_directory }}/{{ project_name }}/templates',
+            BASE_DIR + '/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -114,7 +114,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = '{{ project_directory }}/{{ project_name }}/media'
+MEDIA_ROOT = BASE_DIR + '/media'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -125,7 +125,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = '{{ project_directory }}/{{ project_name }}/static'
+STATIC_ROOT = BASE_DIR + '/static'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/{{ docs_version }}/howto/static-files/
